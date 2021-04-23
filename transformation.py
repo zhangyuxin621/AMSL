@@ -94,7 +94,7 @@ def transformation(dataX):
 
 def shuffle(normal_s_raw,normal_s_no,normal_s_ne,normal_s_op,normal_s_pe,normal_s_sc,normal_s_ti):
     path = '/media/zyx/self_supervised/DSADS/dataset_normalize_together/'
-    # 打乱训练数据
+    ######################shuffle data#########################
     listA = [l for l in range(normal_s_no.shape[0])]
     random.shuffle(listA)
     listB = [p for p in range(normal_s_no.shape[0])]
@@ -146,7 +146,6 @@ def shuffle(normal_s_raw,normal_s_no,normal_s_ne,normal_s_op,normal_s_pe,normal_
     X_train_ti = dataset_ti[:int(dataset_ti.shape[0] * 0.6), :, :, :]
     X_test_ti = dataset_ti[int(dataset_ti.shape[0] * 0.6):, :, :, :]
 
-    # 保存npy
     print('save preparing')
 
     np.save(path + "data_raw_train.npy", X_train_raw)

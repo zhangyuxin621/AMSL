@@ -72,7 +72,7 @@ for i in range(14):
         for z in range(60):
             print(ac_class[normal_class[i]] +'/'+ ac_person[j]+'/'+ ac_file[z]+ '.txt')
             data = np.loadtxt(path + ac_class[normal_class[i]] +'/'+ ac_person[j]+'/'+ ac_file[z] + '.txt',delimiter= ',')
-            normal.append(data) #6720條數據
+            normal.append(data)
     print(len(normal))
 normal = np.array(normal)
 print(normal.shape)
@@ -86,7 +86,7 @@ for i in range(5):
         for z in range(60):
             print(ac_class[abnormal_class[i]] +'/'+ ac_person[j]+'/'+ ac_file[z]+ '.txt')
             data = np.loadtxt(path + ac_class[abnormal_class[i]] +'/'+ ac_person[j]+'/'+ ac_file[z] + '.txt',delimiter= ',')
-            abnormal.append(data) #2400條數據
+            abnormal.append(data) 
     print(len(abnormal))
 abnormal = np.array(abnormal)
 print(abnormal.shape)
