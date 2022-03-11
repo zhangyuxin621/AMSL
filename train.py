@@ -40,6 +40,8 @@ ap.add_argument("-e", "--filter_size0", type=int, default=1,help="# of filter_si
 ap.add_argument("-e", "--filter_size1", type=int, default=32,help="# of filter_size1")
 ap.add_argument("-e", "--filter_size2", type=int, default=64,help="# of filter_size2")
 ap.add_argument("-e", "--filter_size3", type=int, default=128,help="# of filter_size3")
+ap.add_argument("-e", "--lambda1", type=float, default=1.0,help="# of lambda1")
+ap.add_argument("-e", "--lambda2", type=float, default=0.0002,help="# of lambda2")
 ap.add_argument("-e", "--batch", type=int, default=16,help="# of batch size")
 ap.add_argument('--data_path', type = str, default = '/media/zyx/self_supervised/DSADS/dataset_normalize_together/',
                    help='path to load data')
@@ -57,6 +59,8 @@ filter_size0 = args["filter_size0"]
 filter_size1 = args["filter_size1"]
 filter_size2 = args["filter_size2"]
 filter_size3 = args["filter_size3"]
+l1 = args["lambda1"]
+l2 = args["lambda2"]
 batch = args["batch"]
 path = args["data_path"]
 model_path = args["model_path"]
@@ -342,7 +346,7 @@ def conlstm_auto():
     COMPOSITE_ED.compile(loss=[lambda y_true, y_pred: y_pred, lambda y_true, y_pred: y_pred,'categorical_crossentropy',
                                'categorical_crossentropy','categorical_crossentropy','categorical_crossentropy',
                                'categorical_crossentropy','categorical_crossentropy','categorical_crossentropy'],
-                         loss_weights=[1, 0.0002, 1, 1, 1, 1, 1, 1, 1], optimizer='Adam')
+                         loss_weights=[1, l2, l1, l1, l1, l1, l1, l1, l1], optimizer='Adam')
     return COMPOSITE_ED
 
 if __name__ == '__main__':
