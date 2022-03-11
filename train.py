@@ -39,6 +39,7 @@ ap.add_argument("-e", "--local_mem_dim", type=int, default=500,help="# of local_
 ap.add_argument("-e", "--filter_size0", type=int, default=1,help="# of filter_size0")
 ap.add_argument("-e", "--filter_size1", type=int, default=32,help="# of filter_size1")
 ap.add_argument("-e", "--filter_size2", type=int, default=64,help="# of filter_size2")
+ap.add_argument("-e", "--filter_size3", type=int, default=128,help="# of filter_size3")
 ap.add_argument("-e", "--batch", type=int, default=16,help="# of batch size")
 ap.add_argument('--data_path', type = str, default = '/media/zyx/self_supervised/DSADS/dataset_normalize_together/',
                    help='path to load data')
