@@ -94,13 +94,13 @@ Apart from the enhanced generalization ability, AMSL is also more robust against
 
 ![1|center](./picture2/5.png)
 
-<center> Fig.2: The structure of the proposed AMSL. </center>
+<p align="center">Fig.2: The structure of the proposed AMSL.</p>
 
 We propose a novel Adaptive Memory Network with Self-supervised Learning (AMSL) for unsupervised anomaly detection. AMSL consists of four novel components as shown in Fig. 2: 1) a self-supervised learning module, 2) a global memory module, 3) a local memory module and 4) an adaptive fusion module.
 
 ### Comparison Methods
 ![1|center](./picture2/4.png)
 
-TABLE 3 The comparison of mean precision, recall, F1 and accuracy of AMSL and other baselines.
+<p align="center">TABLE 3 The comparison of mean precision, recall, F1 and accuracy of AMSL and other baselines.</p>
 
 TABLE 3 reports the overall performance results on these public datasets. It can be observed that the proposed AMSL method achieves significantly superior performance over the baseline methods in all the datasets. Specifically, compared with other methods, AMSL significantly improves the F1 score by 9.07% on PAMAP2 dataset, 4.90% on CAP dataset, 8.77% on DSADS dataset and 2.35% on WESAD dataset. The same pattern goes for precision and recall. Especially for the largest CAP dataset with over 900 Millon samples, AMSL dramatically outperforms the second-best baseline (OCSVM) with an F1 score of 4.90%, indicating its effectiveness.
