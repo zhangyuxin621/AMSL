@@ -94,7 +94,9 @@ Apart from the enhanced generalization ability, AMSL is also more robust against
 ### Proposed Approach
 
 ![1|center](./picture2/5.png)
-\centerline{Fig.2: The structure of the proposed AMSL.}
+\begin{center}
+Fig.2: The structure of the proposed AMSL.
+\end{center}
 
 We propose a novel Adaptive Memory Network with Self-supervised Learning (AMSL) for unsupervised anomaly detection. AMSL consists of four novel components as shown in Fig. 2: 1) a self-supervised learning module, 2) a global memory module, 3) a local memory module and 4) an adaptive fusion module.
 
